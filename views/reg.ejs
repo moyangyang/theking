@@ -1,0 +1,64 @@
+<% include layouts/header %>
+<!-- 引入css -->
+<link rel="stylesheet" href="/css/reg.css">
+
+<div id="reg-wrap" class="container">
+	<!-- 此位置连接用于链接登录页面 -->
+	<p class="col-md-12">
+		<a id="reg-lianjie" href="/denglu">已有账号？马上登陆</a>
+	</p>
+	<form id="reg" action="/doReg" mathod="post" class="col-md-12 form-horizontal">	
+	
+		<div class="form-group col-md-12">
+			<label class="control-label col-md-2" >用户名</label>
+			<div class="col-md-10">
+				<input id="uname" type="text" name="uname" required class="form-control" placeholder="请设置用户名">
+			</div>
+			<span class="help-block col-md-5">3~20个字符,可包含字母 / 中文 / 数字 / 下划线</span>
+		</div>
+
+		<div class="form-group col-md-12">
+			<label class="control-label col-md-2">手机号</label>
+			<div class="col-md-10">
+				<input type="number" name="shoujihao" required class="form-control" placeholder="可用于登陆和找回密码">
+			</div>
+			<!-- <span class="help-block col-md-5"></span> -->
+		</div>
+
+		<div class="form-group col-md-12">
+			<label class="control-label col-md-2">验证码</label>
+			<div class="col-md-10">
+				<input id="yanzhenma" type="text" name="yanzhenma" required class="form-control" placeholder="请输入验证码">
+			</div>
+			<!-- <span class="help-block col-md-5">3~20个字符,可包含字母 / 中文 / 数字 / 下划线</span> -->
+		</div>
+
+		<div class="form-group col-md-12">
+			<label class="control-label col-md-2">密码</label>
+			<div class="col-md-10">
+				<input id="upwd" type="text" name="upwd" required class="form-control" placeholder="请设置登陆密码">
+			</div>
+			<!-- <span class="help-block col-md-5">3~20个字符,可包含字母 / 中文 / 数字 / 下划线</span> -->
+		</div>
+
+		<div class="form-group col-md-12">
+			<label class="control-label col-md-2"></label>
+			<div class="col-md-10">
+				<input id="yes" required type="checkbox">
+				<div id="reg-text">
+					<span>我已阅读并接受</span> &nbsp;<a href="#">《版权声明》</a>&nbsp;<span> 和 </span>&nbsp;<a href="#">《隐私保护》</a>
+				</div>		
+			</div>
+		</div>
+
+		<div id="form-tijiao" class="form-group col-md-12">
+			<label class="control-label col-md-2"></label>
+			<div class="col-md-10">
+				<button class="btn btn-primary" type="submit">注册</button>
+			</div>
+		</div>
+
+	</form>	
+</div>
+
+<% include layouts/footer %>
