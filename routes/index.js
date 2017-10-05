@@ -7,5 +7,9 @@ var router = express.Router();
 var index = require('../controllers/index')
 /* GET home page. */
 router.get('/', index.index);
+router.get('/denglu', index.denglu);
+router.get('/reg', index.reg);
+router.get('/likecourse',index.likecourse);
+router.get('/shaixuan',index.shaixuan);
 
 module.exports = router;
