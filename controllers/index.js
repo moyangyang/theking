@@ -1,4 +1,4 @@
-// index.js 和 routes/index.js是对应的
+ // index.js 和 routes/index.js是对应的
 
 // 定义对象
 var index = {};
