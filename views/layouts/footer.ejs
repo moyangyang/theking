@@ -36,4 +36,18 @@
 
 </div> <!-- 这是最外层闭合标签-->
 </body>
+<script>
+	// 轮播图方法调用
+	$('#lun').carousel({
+		// 修改轮播周期
+		interval:5000
+	});
+
+	$('#lun>.left,#lun>.right').hide();
+
+	$('#lun').hover(function(){
+
+		$('#lun>.left,#lun>.right').show();
+	})
+</script>
 </html>
