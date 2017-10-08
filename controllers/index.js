@@ -1,17 +1,7 @@
-// index.js 和 routes/index.js是对应的
-
-// 定义对象
+/**
+ * Created by SlzStar on 2017/10/6.
+ */
 var index = {};
-
-// 定义首页方法
-index.index = function(req,res ) {
-	/*
-		req 请求
-		res 响应
-	*/ 
-	// 响应模板
-	res.render('index')
+index.Personal_Tailor = function(req,res){
+    res.render("Personal_Tailor")
 }
-
-// 向外导出
-module.exports =index;
