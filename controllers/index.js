@@ -5,12 +5,16 @@ var index = {};
 
 // 定义首页方法
 index.index = function(req,res ) {
-	/*
-		req 请求
-		res 响应
-	*/ 
-	// 响应模板
-	res.render('index')
+    /*
+        req 请求
+        res 响应
+    */ 
+    // 响应模板
+    res.render('index')
+}
+
+index.Personal_Tailor = function(req,res){
+    res.render("Personal_Tailor")
 }
 
 // 向外导出
