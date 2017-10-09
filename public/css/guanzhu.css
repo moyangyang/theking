@@ -1,4 +1,4 @@
-*{
+		*{
 			margin: 0;
 			padding: 0;
 			list-style: none;
@@ -8,9 +8,10 @@
 			background: #323740;
 		}
 		.mu{
-			width: 1280px;
+			width: 1170px;
 			height: 918px;
 			background: #1A1C22;
+			// background:red;
 			margin:0 auto;
 		}
 		.mu-left{
@@ -41,6 +42,7 @@
 			padding-top: 20px;
 			padding-bottom: 20px;
 			padding-left: 85px;
+			cursor:pointer;
 		}
 		.mu-xuan ul li.active{
 			color: #1252AF;
@@ -59,15 +61,17 @@
 			height: 45px;
 		}
 		.mu-right-wdkc{
-			width: 962px;
+			width: 830px;
 			height: 918px;
 			float: right;
 		}
 		.mu-right-xuan{
-			width: 932px;
+			width: 830px;
 			height: 72px;
 			background: #2A2D36;
 			float: right;
+			cursor:pointer;
+
 		}
 		.mu-right-xuan .active{
 			color: #1252AF;
@@ -79,6 +83,7 @@
 			line-height: 72px;
 			font-weight: 800;
 			padding:0 35px 0 70px;
+			
 		}
 		.mu-kc{
 			color: white;
@@ -87,22 +92,31 @@
 			line-height: 72px;
 			font-weight: 800;
 			padding:0 35px 0 35px;
+
 		}
 		.mu-xxjd1{
 			float: right;
+		}
+
+		.mu-xxjd1>img{
+
+			width:100%;
 		}
 		.mu-kc1{
 			float: right;
 			display: none;
 		}
+		.mu-kc1>img{
+			width: 100%;
+		}
 		.mu-right-wdgz{
-			width: 962px;
+			width: 800px;
 			height: 918px;
 			float: right;
 			display: none;
 		}
 		.mu-right-xuan1{
-			width: 952px;
+			width: 800px;
 			height: 72px;
 			background: #2A2D36;
 			float: right;
@@ -133,24 +147,41 @@
 			font-size: 15px;
 		}
 		.mu-right-xuan1 .active{
+
 			color: #1252AF;
 		}
 		.mu-gzdr1{
 			float: right;
+			width: 800px;
+		}
+		.mu-gzdr1>img{
+			width: 100%;
 		}
 		.mu-fs1{
+			width: 800px;
 			float: right;
 			display: none;
+		}
+		.mu-fs1>img{
+			width: 100%;
 		}
 		.mu-right-lsjl{
-			width: 962px;
+			width: 852px;
 			height: 918px;
 			float: right;
 			display: none;
 		}
+		.mu-right-lsjl>img{
+			width: 100%;
+
+		}
 		.mu-right-wdsc{
-			width: 962px;
+			width: 852px;
 			height: 918px;
 			float: right;
 			display: none;
+		}
+		.mu-right-wdsc>img{
+			width: 100%;
+			
 		}
