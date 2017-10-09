@@ -24,5 +24,10 @@ index.likecourse = function(req,res){
 index.shaixuan = function(req,res){
 	res.render('shaixuan')
 }
+
+index.wenzhang = function(req,res){
+	res.render('wenzhang')
+}
+
 // 向外导出
 module.exports =index;

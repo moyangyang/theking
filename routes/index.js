@@ -12,4 +12,6 @@ router.get('/reg', index.reg);
 router.get('/likecourse',index.likecourse);
 router.get('/shaixuan',index.shaixuan);
 
+router.get('/wenzhang',index.wenzhang);
+
 module.exports = router;
