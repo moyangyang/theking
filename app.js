@@ -7,15 +7,6 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var video = require('./routes/video');
-var ruanjian = require('./routes/ruanjian');
-var shouce1 = require('./routes/shouce1');
-var shouce2 = require('./routes/shouce2');
-var Personal_Tailor = require('./routes/Personal_Tailor');
-var study_manual = require('./routes/study_manual');
-var check = require('./routes/check');
-var training_battalion = require('./routes/training_battalion');
-// var denglu = require('./routes/denglu');
 
 var app = express();
 
@@ -33,15 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/video', video);
-app.use('/ruanjian', ruanjian);
-app.use('/shouce1', shouce1);
-app.use('/shouce2', shouce2);
-app.use('/Personal_Tailor', Personal_Tailor);
-app.use('/study_manual', study_manual);
-app.use('/check', check);
-app.use('/training_battalion', training_battalion);
-// app.use('/denglu', denglu);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
