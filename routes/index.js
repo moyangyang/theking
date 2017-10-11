@@ -11,6 +11,8 @@ router.get('/denglu', index.denglu);
 router.get('/reg', index.reg);
 router.get('/likecourse',index.likecourse);
 router.get('/shaixuan',index.shaixuan);
+router.get('/homepage',index.homepage);
+router.get('/huodong',index.huodong);
 
 router.get('/wenzhang',index.wenzhang);
 

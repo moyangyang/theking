@@ -28,6 +28,14 @@ index.shaixuan = function(req,res){
 index.wenzhang = function(req,res){
 	res.render('wenzhang')
 }
+index.homepage = function(req,res){
+
+	res.render('homepage')
+}
+index.huodong = function(req,res){
+
+	res.render('huodong')
+}
 
 // 向外导出
 module.exports =index;
