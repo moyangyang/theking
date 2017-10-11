@@ -7,7 +7,9 @@
 	<p class="col-md-12">
 		<a id="reg-lianjie" href="/denglu">已有账号？马上登陆</a>
 	</p>
-	<form id="reg" action="/doReg" mathod="post" class="col-md-12 form-horizontal">	
+
+
+	<form id="reg" action="/doReg" method="post" class="form-horizontal">
 	
 		<div class="form-group col-md-12">
 			<label class="control-label col-md-2" >用户名</label>
@@ -36,7 +38,7 @@
 		<div class="form-group col-md-12">
 			<label class="control-label col-md-2">密码</label>
 			<div class="col-md-10">
-				<input id="upwd" type="text" name="upwd" required class="form-control" placeholder="请设置登陆密码">
+				<input id="upwd" type="password" name="upwd" required class="form-control" placeholder="请设置登陆密码">
 			</div>
 			<!-- <span class="help-block col-md-5">3~20个字符,可包含字母 / 中文 / 数字 / 下划线</span> -->
 		</div>
@@ -52,13 +54,88 @@
 		</div>
 
 		<div id="form-tijiao" class="form-group col-md-12">
-			<label class="control-label col-md-2"></label>
-			<div class="col-md-10">
-				<button class="btn btn-primary" type="submit">注册</button>
-			</div>
+			<button class="btn btn-primary col-md-offset-2 col-md-10" type="submit" onclick="chece()" > 注册 </button>	
 		</div>
-
-	</form>	
+	</form>
 </div>
 
 <% include layouts/footer %>
+<script>
+	$(function(){
+		// 检测用户名是否合法、用户数据是否全部填写
+
+		// 设置条件
+		var isUnameOk = false;
+
+		// 检测用户名是否合法可用
+		$('input[name=uname]').blur(function() {
+			// 获取当前input中用户输入的值
+			// console.log($(this).val().trim());
+			var uname = $(this).val().trim();
+
+			// 判断是否为空
+			if (uname == '') {
+				// alert('用户名不允许为空')
+				$(this).parent().next().show().html('用户名不允许为空');
+				// 添加错误样式，移除成功的类名
+				$(this).parent().addClass('has-error').removeClass('has-success');
+
+				// 终止程序
+				return;
+			}
+
+			// 获取当前的this
+			var that = $(this);
+
+			// 将用户输入的数据发送给服务器，进行数据验证
+			$.ajax({
+				// 地址
+				url: '/checkUser',
+
+				// 传递参数
+				data: {
+					uname: uname
+				},
+
+				// 数据传递方式
+				type: 'get',
+
+				// 用于绑定当前的上下文执行环境 this
+				context: $(this),
+
+				// 成功时
+				success: function(data){
+					// console.log(data);
+					// 约定好规则
+					if (data === 'ok') {
+						// 账户名可用
+						$(this).parent().next().show().html('恭喜您，用户名可用！');
+
+						// 添加成功的类名，移除错误的类名
+						$(this).parent().addClass('has-success').removeClass('has-error');
+
+						// 将用户名可用的标记设置为true
+						isUnameOk = true;
+					} else if (data === 'used') {
+						$(this).parent().addClass('has-error').removeClass('has-success');
+						$(this).parent().next().show().html('用户名已被占用')
+					}
+				},
+
+				// 失败时
+				error: function(error){
+					console.log(error);
+				}
+			})
+		})
+
+
+		function chece(){
+			if(!isUnameOk){
+				$('#reg').action = '/doReg';
+				$('#reg').submit();
+			}
+			
+		}
+	})
+</script>
