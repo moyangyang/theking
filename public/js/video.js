@@ -12,3 +12,6 @@ $('.vid-btm-top>h4').click(function(){
     
 })
 
+
+
+
