@@ -1,6 +1,6 @@
-*{
-	margin:0;
-	padding:0;
+
+.container{
+	margin-bottom:30px;
 }
 .online,.unline,.sheji{
 	width:55px;

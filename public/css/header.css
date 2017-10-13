@@ -1,11 +1,12 @@
 body{
-	background:#1D1F25;
-	min-width:1142;
+	min-width:1142px;
+	background:#1F232A;
 }
 #dingbu{
 	height:90px;
 	line-height:90px;
 	font-size:18px;
+	width:1142px;
 }
 #dingbu-logo>a{
 	text-decoration:none;
@@ -106,13 +107,27 @@ body{
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
 	background-color:#0E0E10;
+	/*color:#0E57C2;*/
 }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover
 .dropdown-menu{
 	background-color:#0E0E10;
+	/*color:#0E57C2;*/
 }
+#nav-wrap .navbar-default .navbar-nav>.active>a{
+	color:#0E57C2;
+}
+
 #navList>li>a:focus{
 	color:#0E57C2;
 }
 .dropdown-menu>li>a{
 	color:#ccc;
+	background:#0E0E10;
+}
+.dropdown-menu>li{
+	background:#0E0E10;
+}
+.dropdown-menu{
+	background:#0E0E10;
 }

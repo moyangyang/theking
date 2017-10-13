@@ -4,6 +4,7 @@
 var index = {};
 
 var userModel = require('../models/userModel');
+var uimanyModel = require('../models/uimanyModel');
 var cryptoStr = require('../config/crypto_config');
 
 
@@ -44,7 +45,7 @@ index.checkUser = function(req, res){
  			res.send('used');
  		} else {
  			// 该账户不存在，可用！
- 			res.send('ok')
+ 			res.send('ok');
  		}
  	})
 }
@@ -81,8 +82,6 @@ index.doReg = function(req, res) {
 
 
 
-
-
 // 定义首页方法
 index.index = function(req,res ) {
 	/*
@@ -102,7 +101,7 @@ index.doLogin = function(req, res) {
 	};
 
 	// 查询数据库
-	userModel.findOne(con, function(err, data) {
+	userModel.findOne(con, {}, function(err, data) {
 		// console.log(err, data)
 		if (!err && data) {
 			// 账户和密码正确,将信息存储到session中
@@ -142,9 +141,21 @@ index.shaixuan = function(req,res){
 	res.render('shaixuan')
 }
 
+
+// 文章模块
 index.wenzhang = function(req,res){
-	res.render('wenzhang')
+	// res.render('wenzhang')
+	uimanyModel.find({}, {title:1,content:1}).populate('user', {uname:1}).exec(function(err, data) {
+			console.log(err, data)
+			if (!err && data) {	
+				// 响应页面
+				res.render('wenzhang', {data: data});
+			}
+		})
 }
+
+
+
 index.homepage = function(req,res){
 
 	res.render('homepage')
@@ -153,8 +164,6 @@ index.huodong = function(req,res){
 
 	res.render('huodong')
 }
-
-
 
 // 向外导出
 module.exports =index;

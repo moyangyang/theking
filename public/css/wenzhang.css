@@ -1,6 +1,7 @@
 .container{
 	/*padding-right:0;*/
 	padding:0;
+	width:1142px;
 }
 .r-title,.f-title{
 	margin-bottom:18px;
@@ -78,7 +79,7 @@
 }
 .wz-content>.col-md-7{
 	padding-right:0;
-	width:450px;
+	width:400px;
 }
 .wz-content>.col-md-7>.col-md-12{
 	padding:0;
@@ -95,7 +96,6 @@
 	margin-right:5px;
 }
 .textpl:first-child{
-	margin-left:50px;
 	margin-right:22px;
 	width:86px;
 	height:30px;

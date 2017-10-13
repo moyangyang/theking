@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 // 定义数据库连接地址
-var dbUrl = 'mongodb://data:data@localhost:27017/data';
+var dbUrl = 'mongodb://data:data@192.168.31.99:27017/data';
 
 // 建立连接
 mongoose.connect(dbUrl, {

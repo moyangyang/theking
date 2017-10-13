@@ -24,6 +24,72 @@ var userSchema = new mongoose.Schema({
 	upwd: {
 		type: String,
 		// default: ''
+	},
+	// 作品 相当于字段 
+	zuopin: {
+		// 数据类型
+		type: Number,
+
+		// 唯一性数据
+		default: 0
+	},
+
+	// 粉丝字段
+	fensi: {
+		// 数据类型
+		type: Number,
+
+		// 唯一性数据
+		default: 0
+	},
+
+	// 关注字段
+	guanzhu: {
+		// 数据类型
+		type: Number,
+
+		// 唯一性数据
+		default: 0
+	},
+
+	// 积分字段
+	jifen: {
+		// 数据类型
+		type: Number,
+
+		// 唯一性数据
+		default: 0
+	},
+
+	// 分享字段
+	fenxiang: {
+		// 数据类型
+		type: Object,
+
+		// 唯一性数据
+		default: {}
+	},
+
+	// 评论字段
+	pinglun: {
+		// 数据类型
+		type: String,
+
+		// 唯一性数据
+		// default: 0
+	},
+
+	// 点赞字段
+	dianzan: {
+		// 数据类型
+		type: Number,
+
+		// 唯一性数据
+		default: 0
+	},
+	qianming: {
+		type: String,
+		default:'这个家伙很懒，什么都没有留下'
 	}
 
 });

@@ -1,4 +1,6 @@
 <% include layouts/header %>
+<link rel="stylesheet" href="/css/homepage.css">
+
 <div class="container">
 		<!-- 头部开始 -->
 		<ul class="list-unstyled header">
@@ -8,7 +10,7 @@
 						<i>
 							<img src="./imgs/ljifen.png" alt="">
 						</i>
-						<span style="margin-left:19px">872积分</span>
+						<span style="margin-left:19px"><%= user.jifen %> 积分</span>
 					</div>
 					<div class="integral-bottom">
 						<i>
@@ -21,21 +23,21 @@
 			</li>
 			<li class="col-md-4 head-cter" style="display:block;text-align:center;">
 				<img  class="img-circle center-block touxiang" src="./imgs/Rectangle 9.png" alt="">
-				<p>白鱼123</p>
-				<span style="margin-top:14px;color:#fff;">这个人很懒什么都没写</span>
+				<p><%= user.uname %></p>
+				<span style="margin-top:14px;color:#fff;"><%= user.qianming %></span>
 			</li>
 			<li class="col-md-4">
 				<ul class="list-unstyled head-rg">
 					<li class="col-sm-4">
-						<span>106</span>
+						<span><%= user.zuopin %></span>
 						<span class="">作品</span>
 					</li>
 					<li class="col-sm-4">
-						<span>6602</span>
+						<span><%= user.fensi %></span>
 						<span>粉丝</span>
 					</li>
 					<li class="col-sm-4">
-						<span>6</span>
+						<span><%= user.guanzhu %></span>
 						<span>关注</span>
 					</li>
 				</ul>
@@ -917,7 +919,8 @@
 			<!-- 呈现选项卡中的内容结束 -->
 
 			<!-- 底部按钮开始 查看更多 -->
-			<a class="btn btn-primary col-md-offset-5" href="#" style="margin-top:123px;">查看更多</a>
+			<a class="btn btn-primary col-md-offset-5" href="/create/fabu" style="margin-top:123px;">发布文章</a>
 			<!-- 底部按钮结束 查看更多 -->
 		</div>
 <% include layouts/footer %>
+<script src="/js/homepage.js"></script>
