@@ -13,11 +13,8 @@
 	<script src="/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="/css/reset.css">
+	
 	<link rel="stylesheet" href="/css/header.css">
-	<link rel="stylesheet" href="/css/Personal_Tailor.css">
-	<link rel="stylesheet" href="/css/homepage.css">
-	<link rel="stylesheet" href="/css/huodong.css">
-	<link rel="stylesheet" href="/css/guanzhu.css">
 	<link rel="icon" href="/imgs/logo.png">
 
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
@@ -55,6 +52,7 @@
 			// console.log(user) 
 			if (user) {
 		%>
+
 			<a class="dinglu-right dinglu-right-denglu" href="/logout">注销</a>
 		<%
 			} else { 
@@ -74,9 +72,9 @@
 	<!-- 导航部分 -->
 	<nav style="border:0;background:#0E0E10;" class="navbar navbar-default col-md-12">
 		<ul id="navList" class="nav navbar-nav">
-	        <li class="navActive"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
-	        <li><a href="/Personal_Tailor">私人订制</a></li>
-	        <li><a href="/study_manual">学习</a></li>
+	        <li class="<%= path==='/'? 'active':'' %>"><a href="/">首页 <span class="sr-only">(current)</span></a></li>
+	        <li class="<%= path==='/Personal_Tailor'? 'active':'' %>" ><a href="/Personal_Tailor">私人订制</a></li>
+	        <li class="<%= path==='/study_manual'? 'active':'' %>"><a href="/study_manual">学习</a></li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
 	          <ul class="dropdown-menu">

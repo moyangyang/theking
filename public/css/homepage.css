@@ -7,6 +7,11 @@ a:hover{
 li{
 	list-style: none;
 }
+#houdong{
+	width:1142px;
+	/*padding:0;*/
+	
+}
 /*头部开始*/
 .header{
 	background:#1A1C22;
@@ -326,6 +331,8 @@ li{
 	display: inline-block;
 	margin-top: 5px;
 	margin-left: 9px;
+	width:20px;
+	height:20px;
 }
 .jieda .index-jieda .index-jieda-bottom{
 	width: 100%;

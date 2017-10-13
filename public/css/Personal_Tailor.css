@@ -6,12 +6,16 @@
 }
 /*-------------私人定制页面--------------*/
 .tailor_center{
-    width:100%;
+    width:1142px;
     height:360px;
     background:#22252b;
 }
 .container{
     background:#1a1c22;
+}
+#shirendingzi{
+    width:1142px;
+    padding-left:0;
 }
 .tailor_center .navLeft{
     padding:20px 0px 0 20px;
@@ -112,6 +116,8 @@
 .sty_container{
     background:#1e2028;
     color:#fff;
+    width:1142px;
+    padding-left:55px;
 }
 .list-group-item{
     background:none;

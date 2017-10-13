@@ -2,6 +2,14 @@ body{
 
     font-family:微软雅黑;
 }
+#lun-wrap{
+    background:#1A1C22;
+    width:1142px;
+    padding:0;
+}
+.container{
+    background:#1A1C22;
+}
 #lun{
 
     /*border:1px solid red;*/
@@ -49,6 +57,11 @@ body{
      /*margin-top:15px;*/
      margin:20px auto;
      float:left;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+    width:1142px;
+    height:430px;
 }
 
 .situ>.ps{
@@ -823,7 +836,9 @@ body{
       软件下载页面开始
 
 */
-
+.container{
+    width:1142px;
+}
 #app-top>div{
 
     height:30px;

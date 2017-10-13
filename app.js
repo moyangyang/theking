@@ -12,6 +12,9 @@ var flash = require('connect-flash');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var create = require('./routes/create');
+
+
 var video = require('./routes/video');
 var ruanjian = require('./routes/ruanjian');
 var shouce1 = require('./routes/shouce1');
@@ -21,7 +24,6 @@ var study_manual = require('./routes/study_manual');
 var check = require('./routes/check');
 var training_battalion = require('./routes/training_battalion');
 var guanzhu = require('./routes/guanzhu');
-// var denglu = require('./routes/denglu');
 
 var app = express();
 
@@ -73,6 +75,9 @@ app.use(function(req, res, next) {
 	// 挂载错误信息
 	res.locals.loginError = req.flash('loginError');
 	// console.log(res.locals.loginError)
+	// 挂载路由
+	res.locals.path = req.path;
+	// console.log(req.path);
 
 	// next() 移交权限
 	next()
@@ -80,6 +85,9 @@ app.use(function(req, res, next) {
 
 
 app.use('/', index);
+app.use('/create', create);
+
+
 app.use('/users', users);
 app.use('/video', video);
 app.use('/ruanjian', ruanjian);
@@ -91,6 +99,8 @@ app.use('/check', check);
 app.use('/training_battalion', training_battalion);
 app.use('/guanzhu', guanzhu);
 // app.use('/denglu', denglu);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
