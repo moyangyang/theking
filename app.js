@@ -10,6 +10,8 @@ var session = require('express-session');
 var flash = require('connect-flash');
 
 var checkUserLogin = require('./middlewares/checkUserLogin');
+
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var create = require('./routes/create');
@@ -25,7 +27,10 @@ var check = require('./routes/check');
 var training_battalion = require('./routes/training_battalion');
 var guanzhu = require('./routes/guanzhu');
 
+
 var dianzan = require('./routes/dianzan');
+
+
 
 var app = express();
 
@@ -76,8 +81,11 @@ app.use(function(req, res, next) {
 	// console.log(req.flash('loginError'));
 	// 挂载错误信息
 	res.locals.loginError = req.flash('loginError');
+
 	res.locals.dianzanres = req.flash('dianzanres');
 	
+
+
 	// console.log(res.locals.loginError)
 	// 挂载路由
 	res.locals.path = req.path;
@@ -90,9 +98,8 @@ app.use(function(req, res, next) {
 
 app.use('/', index);
 app.use('/create', create);
+
 app.use('/dianzan', checkUserLogin,dianzan);
-
-
 app.use('/users', users);
 app.use('/video', video);
 app.use('/ruanjian', ruanjian);
@@ -104,9 +111,6 @@ app.use('/check', check);
 app.use('/training_battalion', training_battalion);
 app.use('/guanzhu', guanzhu);
 // app.use('/denglu', denglu);
-
-
-
 
 
 // catch 404 and forward to error handler
